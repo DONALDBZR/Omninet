@@ -20,7 +20,7 @@ if (json_decode(file_get_contents("php://input")) != null) {
         $message = array(
             "success" => "failure",
             "url" => $User->domain . "/StormySystems2/Login",
-            "message" => $Renderer->userLoginFormWronglyFilled()
+            "message" => "The form must be filled completely"
         );
         // Preparing the header for the JSON
         header('Content-Type: application/json');

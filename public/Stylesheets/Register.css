@@ -1,0 +1,226 @@
+/* Importing fonts */
+@font-face {
+    font-family: "Chopsic";
+    src: url("../Fonts/Chopsic.otf");
+}
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("../Fonts/Source Code Pro - Regular.otf");
+}
+/* Declaration of variables */
+:root {
+    --percentage: 100%;
+    --pixel: 100px;
+    --chopsic: "chopsic";
+    --color1: rgb(0, 0, 0);
+    --sourceCodePro: "Source Code Pro";
+    --color2: rgb(204, 233, 137);
+    --color3: rgb(255, 255, 255);
+    --color4: rgb(25, 130, 25);
+    --tablet: 0.729;
+    --mobile: 0.531441;
+    --color5: rgb(255, 0, 0);
+    --color6: rgb(0, 255, 0);
+}
+/* Body */
+* {
+    margin: calc(var(--percentage) * 0);
+    width: var(--percentage);
+    font-size: var(--percentage);
+}
+/* Header */
+header,
+header #catalog,
+header #utilities,
+header #catalog div,
+header #utilities div {
+    display: flex;
+}
+header #logo,
+header #catalog,
+header #utilities,
+header #utilities div {
+    width: calc(var(--percentage) / 3);
+}
+header #catalog div {
+    width: calc(var(--percentage) / 2);
+    justify-content: center;
+}
+header #logo a {
+    font-family: var(--chopsic);
+    color: var(--color1);
+    margin-left: calc(var(--percentage) * 0.02);
+    text-decoration: none;
+}
+header #logo a:hover,
+header #catalog div a:hover {
+    text-decoration: underline;
+}
+header #catalog div a {
+    font-family: var(--sourceCodePro);
+    text-decoration: none;
+    color: var(--color1);
+    width: unset;
+}
+header #utilities div a {
+    width: unset;
+    text-decoration: none;
+}
+header #utilities div .faUser,
+header #utilities div .faCart,
+header #utilities div .faSearch {
+    color: var(--color1);
+}
+header #utilities div .faUser:hover,
+header #utilities div .faCart:hover,
+header #utilities div .faSearch:hover {
+    color: var(--color4);
+}
+header #utilities div {
+    justify-content: center;
+}
+header {
+    background-color: var(--color2);
+    padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0);
+}
+/* Main */
+main {
+    background-color: var(--color2);
+}
+main #formContainer {
+    width: calc(var(--percentage) * 0.8);
+    padding: calc(var(--percentage) * 0) calc(var(--percentage) * 0.1);
+}
+main #formContainer form #label {
+    font-family: var(--sourceCodePro);
+    text-align: center;
+    padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0);
+}
+main #formContainer form input {
+    font-family: var(--sourceCodePro);
+    background-color: var(--color2);
+    border: none;
+    border-bottom: calc(var(--pixel) * 0.01) solid var(--color1);
+    margin-bottom: calc(var(--percentage) * 0.01);
+}
+main #formContainer form #registerButton {
+    display: flex;
+    justify-content: center;
+}
+main #formContainer form #registerButton button {
+    width: unset;
+    padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0.02);
+    font-family: var(--chopsic);
+    color: var(--color2);
+    background-color: var(--color1);
+    border: none;
+    cursor: pointer;
+}
+main #formContainer form #registerButton button:hover {
+    color: var(--color1);
+    background-color: var(--color2);
+}
+main #serverRendering {
+    display: flex;
+    justify-content: center;
+}
+main #serverRendering h1 {
+    font-family: var(--chopsic);
+    font-weight: bold;
+    width: unset;
+}
+main #serverRendering #success {
+    color: var(--color6);
+}
+main #serverRendering #failrue {
+    color: var(--color5);
+}
+/* Footer */
+footer {
+    text-align: center;
+    background-color: var(--color2);
+    font-family: var(--chopsic);
+    padding-bottom: calc(var(--percentage) * 0.01);
+}
+/* Responsiveness for computers */
+@media screen and (min-width: 1024px) {
+    /* Header */
+    header #logo a {
+        font-size: calc(var(--percentage) * 2);
+    }
+    header #catalog div a {
+        font-size: calc(var(--percentage) * 1.2);
+    }
+    header #utilities div a {
+        font-size: calc(var(--percentage) * 2);
+    }
+    /* Main */
+    main #formContainer form #label {
+        font-size: calc(var(--percentage) * 2);
+    }
+    main #formContainer form input {
+        font-size: var(--percentage);
+    }
+    main #serverRendering h1 {
+        font-size: calc(var(--percentage) * 1.1);
+    }
+    /* Footer */
+    footer {
+        font-size: calc(var(--percentage) * 2);
+        padding-top: calc(var(--percentage) * 0.21);
+    }
+}
+/* Responsiveness for tablets */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Header */
+    header #logo a {
+        font-size: calc(var(--percentage) * 2 * var(--tablet));
+    }
+    header #catalog div a {
+        font-size: calc(var(--percentage) * 1.2 * var(--tablet));
+    }
+    header #utilities div a {
+        font-size: calc(var(--percentage) * 2 * var(--tablet));
+    }
+    /* Main */
+    main #formContainer form #label {
+        font-size: calc(var(--percentage) * 2 * var(--tablet));
+    }
+    main #formContainer form input {
+        font-size: calc(var(--percentage) * var(--tablet));
+    }
+    main #serverRendering h1 {
+        font-size: calc(var(--percentage) * 1.1 * var(--tablet));
+    }
+    /* Footer */
+    footer {
+        font-size: calc(var(--percentage) * 2 * var(--tablet));
+    }
+}
+/* Responsiveness for mobiles */
+@media screen and (max-width: 767px) {
+    /* Header */
+    header #logo a {
+        font-size: calc(var(--percentage) * 2 * var(--mobile));
+    }
+    header #catalog div a {
+        font-size: calc(var(--percentage) * 1.2 * var(--mobile));
+    }
+    header #utilities div a {
+        font-size: calc(var(--percentage) * 2 * var(--mobile));
+    }
+    /* Main */
+    main #formContainer form #label {
+        font-size: calc(var(--percentage) * 2 * var(--mobile));
+    }
+    main #formContainer form input {
+        font-size: calc(var(--percentage) * var(--mobile));
+    }
+    main #serverRendering h1 {
+        font-size: calc(var(--percentage) * 1.1 * var(--mobile));
+    }
+    /* Footer */
+    footer {
+        font-size: calc(var(--percentage) * 2 * var(--mobile));
+    }
+}
