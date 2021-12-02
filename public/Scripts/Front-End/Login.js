@@ -12,26 +12,26 @@ class Header extends React.Component {
         return (
             <header>
                 <div id="logo">
-                    <a href="./">Omninet</a>
+                    <a href="../">Omninet</a>
                 </div>
                 <nav id="catalog">
                     <div>
-                        <a href="./Shop">Shops</a>
+                        <a href="../Shop">Shops</a>
                     </div>
                     <div>
-                        <a href="./Brand">Brands</a>
+                        <a href="../Brand">Brands</a>
                     </div>
                 </nav>
                 <nav id="utilities">
                     <div>
-                        <a href="./User" class="fas fa-user faUser"></a>
+                        <a href="./" class="fas fa-user faUser"></a>
                     </div>
                     <div>
-                        <a href="./Search" class="fas fa-search faSearch"></a>
+                        <a href="../Search" class="fas fa-search faSearch"></a>
                     </div>
                     <div>
                         <a
-                            href="./Cart"
+                            href="../Cart"
                             class="fas fa-shopping-cart faCart"
                         ></a>
                     </div>
@@ -42,26 +42,96 @@ class Header extends React.Component {
 }
 // Main class
 class Main extends React.Component {
+    // Constructor method
+    constructor(props) {
+        super(props);
+        this.state = {
+            mailAddress: "",
+            password: "",
+            success: "",
+            message: "",
+            url: "",
+        };
+    }
+    // change handler method
+    handleChange(event) {
+        // Local variables
+        const target = event.target;
+        const value = target.value;
+        const name = target.name;
+        // Setting the value
+        this.setState({
+            [name]: value,
+        });
+    }
+    // Submit handler method
+    handleSubmit(event) {
+        // Local variables
+        const delay = 4200;
+        // Prevent default submission
+        event.preventDefault();
+        // Generating a POST request
+        fetch("./Login.php", {
+            method: "POST",
+            body: JSON.stringify({
+                mailAddress: this.state.mailAddress,
+                password: this.state.password,
+            }),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then((response) => response.json())
+            .then((data) =>
+                this.setState({
+                    success: data.success,
+                    message: data.message,
+                    url: data.url,
+                })
+            )
+            .then(() => this.redirector(delay));
+    }
+    // Redirector method
+    redirector(delay) {
+        setTimeout(() => {
+            window.location.href = this.state.url;
+        }, delay);
+    }
     // Render method
     render() {
         return (
             <main>
-                {/* <div id="mainItem">
-                    <div>
-                        <img
-                            src="./public/Images/Items/mock-hoodie-new_200056db-691b-4ca5-afcf-b3c2163694aa_1024x1024@2x.jpg"
-                            alt="Main Item"
+                <div id="formContainer">
+                    <form method="POST" onSubmit={this.handleSubmit.bind(this)}>
+                        <div id="label">Login Form</div>
+                        <input
+                            type="email"
+                            name="mailAddress"
+                            placeholder="Mail Address"
+                            value={this.state.mailAddress}
+                            onChange={this.handleChange.bind(this)}
+                            required
                         />
-                    </div>
-                    <div>
-                        <div>
-                            <h1>League of Legends - Lee Sin Hoodie</h1>
+                        <input
+                            type="password"
+                            name="password"
+                            placeholder="Password"
+                            value={this.state.password}
+                            onChange={this.handleChange.bind(this)}
+                            required
+                        />
+                        <div id="loginButton">
+                            <button>Login</button>
                         </div>
-                        <div>
-                            <a href="./Hoodies/LeeSinHoodie">Shop Now</a>
-                        </div>
-                    </div>
-                </div> */}
+                    </form>
+                </div>
+                <div id="accountManagement">
+                    <a href="../Register">Register</a>
+                    <a href="../Reset">Forgot Password?</a>
+                </div>
+                <div id="serverRendering">
+                    <h1 id={this.state.success}>{this.state.message}</h1>
+                </div>
             </main>
         );
     }

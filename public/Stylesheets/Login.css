@@ -82,13 +82,61 @@ header {
     padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0);
 }
 /* Main */
-
+main {
+    background-color: var(--color2);
+}
+main #formContainer {
+    width: calc(var(--percentage) * 0.8);
+    padding: calc(var(--percentage) * 0) calc(var(--percentage) * 0.1);
+}
+main #formContainer form #label {
+    font-family: var(--sourceCodePro);
+    text-align: center;
+    padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0);
+}
+main #formContainer form input {
+    font-family: var(--sourceCodePro);
+    background-color: var(--color2);
+    border: none;
+    border-bottom: calc(var(--pixel) * 0.01) solid var(--color1);
+    margin-bottom: calc(var(--percentage) * 0.01);
+}
+main #formContainer form #loginButton {
+    display: flex;
+    justify-content: center;
+}
+main #formContainer form #loginButton button {
+    width: unset;
+    padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0.02);
+    font-family: var(--chopsic);
+    color: var(--color2);
+    background-color: var(--color1);
+    border: none;
+    cursor: pointer;
+}
+main #formContainer form #loginButton button:hover {
+    color: var(--color1);
+    background-color: var(--color2);
+}
+main #accountManagement {
+    display: flex;
+    justify-content: space-around;
+}
+main #accountManagement a {
+    width: unset;
+    font-family: var(--sourceCodePro);
+    color: var(--color1);
+    text-decoration: none;
+}
+main #accountManagement a:hover {
+    text-decoration: underline;
+}
 /* Footer */
 footer {
     text-align: center;
     background-color: var(--color2);
     font-family: var(--chopsic);
-    padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0);
+    padding-bottom: calc(var(--percentage) * 0.01);
 }
 /* Responsiveness for computers */
 @media screen and (min-width: 1024px) {
@@ -103,9 +151,18 @@ footer {
         font-size: calc(var(--percentage) * 2);
     }
     /* Main */
-
+    main #formContainer form #label {
+        font-size: calc(var(--percentage) * 2);
+    }
+    main #formContainer form input {
+        font-size: var(--percentage);
+    }
+    main #accountManagement a {
+        font-size: calc(var(--percentage) * 1.1);
+    }
     /* Footer */
     footer {
+        padding-top: calc(var(--percentage) * 0.24);
         font-size: calc(var(--percentage) * 2);
     }
 }
