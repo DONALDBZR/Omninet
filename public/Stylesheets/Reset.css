@@ -222,7 +222,7 @@ footer {
     }
     /* Footer */
     footer {
-        padding-top: calc(var(--percentage) * 1.11);
+        padding-top: calc(var(--percentage) * 1.2);
         font-size: calc(var(--percentage) * 2 * var(--mobile));
     }
 }
