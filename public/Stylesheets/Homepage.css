@@ -16,6 +16,7 @@
     --sourceCodePro: "Source Code Pro";
     --color2: rgb(204, 233, 137);
     --color3: rgb(255, 255, 255);
+    --color4: rgb(25, 130, 25);
     --tablet: 0.729;
     --mobile: 0.531441;
 }
@@ -67,6 +68,11 @@ header #utilities div .faUser,
 header #utilities div .faCart,
 header #utilities div .faSearch {
     color: var(--color1);
+}
+header #utilities div .faUser:hover,
+header #utilities div .faCart:hover,
+header #utilities div .faSearch:hover {
+    color: var(--color4);
 }
 header #utilities div {
     justify-content: center;
