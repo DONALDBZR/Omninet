@@ -75,9 +75,6 @@ header {
     padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0);
 }
 /* Main */
-main #mainItem {
-    background-image: url("../Images/Items/mock-hoodie-new_200056db-691b-4ca5-afcf-b3c2163694aa_1024x1024@2x.jpg");
-}
 main #mainItem div {
     display: flex;
     justify-content: center;
@@ -123,8 +120,9 @@ footer {
         font-size: calc(var(--percentage) * 2);
     }
     /* Main */
-    main #mainItem div {
-        padding-top: calc(var(--percentage) * 1.08);
+    main #mainItem div img {
+        width: auto;
+        height: calc(var(--pixel) * 5.7);
     }
     main #mainItem div div h1 {
         font-size: calc(var(--percentage) * 2);
@@ -150,8 +148,9 @@ footer {
         font-size: calc(var(--percentage) * 2 * var(--tablet));
     }
     /* Main */
-    main #mainItem div {
-        padding-top: calc(var(--percentage) * 1.08);
+    main #mainItem div img {
+        width: auto;
+        height: calc(var(--pixel) * 5.7);
     }
     main #mainItem div div h1 {
         font-size: calc(var(--percentage) * 1.6 * var(--tablet));

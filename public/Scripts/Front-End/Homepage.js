@@ -48,6 +48,12 @@ class Main extends React.Component {
             <main>
                 <div id="mainItem">
                     <div>
+                        <img
+                            src="./public/Images/Items/mock-hoodie-new_200056db-691b-4ca5-afcf-b3c2163694aa_1024x1024@2x.jpg"
+                            alt="Main Item"
+                        />
+                    </div>
+                    <div>
                         <div>
                             <h1>League of Legends - Lee Sin Hoodie</h1>
                         </div>
