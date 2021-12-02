@@ -19,6 +19,8 @@
     --color4: rgb(25, 130, 25);
     --tablet: 0.729;
     --mobile: 0.531441;
+    --color5: rgb(255, 0, 0);
+    --color6: rgb(0, 255, 0);
 }
 /* Body */
 * {
@@ -131,6 +133,21 @@ main #accountManagement a {
 main #accountManagement a:hover {
     text-decoration: underline;
 }
+main #serverRendering {
+    display: flex;
+    justify-content: center;
+}
+main #serverRendering h1 {
+    font-family: var(--chopsic);
+    font-weight: bold;
+    width: unset;
+}
+main #serverRendering #success {
+    color: var(--color6);
+}
+main #serverRendering #failrue {
+    color: var(--color5);
+}
 /* Footer */
 footer {
     text-align: center;
@@ -158,6 +175,9 @@ footer {
         font-size: var(--percentage);
     }
     main #accountManagement a {
+        font-size: calc(var(--percentage) * 1.1);
+    }
+    main #serverRendering h1 {
         font-size: calc(var(--percentage) * 1.1);
     }
     /* Footer */
@@ -188,6 +208,9 @@ footer {
     main #accountManagement a {
         font-size: calc(var(--percentage) * 1.1 * var(--tablet));
     }
+    main #serverRendering h1 {
+        font-size: calc(var(--percentage) * 1.1 * var(--tablet));
+    }
     /* Footer */
     footer {
         padding-top: calc(var(--percentage) * 0.37);
@@ -214,6 +237,9 @@ footer {
         font-size: calc(var(--percentage) * var(--mobile));
     }
     main #accountManagement a {
+        font-size: calc(var(--percentage) * 1.1 * var(--mobile));
+    }
+    main #serverRendering h1 {
         font-size: calc(var(--percentage) * 1.1 * var(--mobile));
     }
     /* Footer */
