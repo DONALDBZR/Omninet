@@ -43,7 +43,6 @@ header #catalog div {
 }
 header #logo a {
     font-family: var(--chopsic);
-    font-size: calc(var(--percentage) * 2);
     color: var(--color1);
     margin-left: calc(var(--percentage) * 0.02);
     text-decoration: none;
@@ -54,13 +53,11 @@ header #catalog div a:hover {
 }
 header #catalog div a {
     font-family: var(--sourceCodePro);
-    font-size: calc(var(--percentage) * 1.2);
     text-decoration: none;
     color: var(--color1);
     width: unset;
 }
 header #utilities div a {
-    font-size: calc(var(--percentage) * 2);
     width: unset;
     text-decoration: none;
 }
@@ -81,7 +78,6 @@ main #mainItem {
     background-image: url("../Images/Items/mock-hoodie-new_200056db-691b-4ca5-afcf-b3c2163694aa_1024x1024@2x.jpg");
 }
 main #mainItem div {
-    padding-top: calc(var(--percentage) * 1.08);
     display: flex;
     justify-content: center;
 }
@@ -90,7 +86,6 @@ main #mainItem div div {
     justify-content: center;
 }
 main #mainItem div div h1 {
-    font-size: calc(var(--percentage) * 2);
     font-family: var(--sourceCodePro);
     font-weight: bold;
     text-align: center;
@@ -101,17 +96,43 @@ main #mainItem div div a {
     background-color: var(--color1);
     color: var(--color3);
     padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0.02);
-    font-size: calc(var(--percentage) * 1.4);
     font-family: var(--chopsic);
 }
 main #mainItem div div a:hover {
     background: none;
     color: var(--color1);
 }
+/* Footer */
 footer {
     text-align: center;
     background-color: var(--color2);
     font-family: var(--chopsic);
-    font-size: calc(var(--percentage) * 2);
     padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0);
+}
+/* Responsiveness for computers */
+@media screen and (min-width: 1024px) {
+    /* Header */
+    header #logo a {
+        font-size: calc(var(--percentage) * 2);
+    }
+    header #catalog div a {
+        font-size: calc(var(--percentage) * 1.2);
+    }
+    header #utilities div a {
+        font-size: calc(var(--percentage) * 2);
+    }
+    /* Main */
+    main #mainItem div {
+        padding-top: calc(var(--percentage) * 1.08);
+    }
+    main #mainItem div div h1 {
+        font-size: calc(var(--percentage) * 2);
+    }
+    main #mainItem div div a {
+        font-size: calc(var(--percentage) * 1.4);
+    }
+    /* Footer */
+    footer {
+        font-size: calc(var(--percentage) * 2);
+    }
 }
