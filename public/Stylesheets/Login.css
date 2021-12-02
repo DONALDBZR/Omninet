@@ -179,9 +179,18 @@ footer {
         font-size: calc(var(--percentage) * 2 * var(--tablet));
     }
     /* Main */
-
+    main #formContainer form #label {
+        font-size: calc(var(--percentage) * 2 * var(--tablet));
+    }
+    main #formContainer form input {
+        font-size: calc(var(--percentage) * var(--tablet));
+    }
+    main #accountManagement a {
+        font-size: calc(var(--percentage) * 1.1 * var(--tablet));
+    }
     /* Footer */
     footer {
+        padding-top: calc(var(--percentage) * 0.37);
         font-size: calc(var(--percentage) * 2 * var(--tablet));
     }
 }
