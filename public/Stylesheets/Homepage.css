@@ -150,7 +150,7 @@ footer {
     /* Main */
     main #mainItem div img {
         width: auto;
-        height: calc(var(--pixel) * 5.7);
+        height: calc(var(--pixel) * 4.54);
     }
     main #mainItem div div h1 {
         font-size: calc(var(--percentage) * 1.6 * var(--tablet));
