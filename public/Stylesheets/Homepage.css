@@ -1,0 +1,77 @@
+/* Importing fonts */
+@font-face {
+    font-family: "Chopsic";
+    src: url("../Fonts/Chopsic.otf");
+}
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("../Fonts/Source Code Pro - Regular.otf");
+}
+/* Declaration of variables */
+:root {
+    --percentage: 100%;
+    --pixel: 100px;
+    --chopsic: "chopsic";
+    --color1: rgb(0, 0, 0);
+    --sourceCodePro: "Source Code Pro";
+    --color2: rgb(204, 233, 137);
+}
+/* Body */
+* {
+    margin: calc(var(--percentage) * 0);
+    width: var(--percentage);
+    font-size: var(--percentage);
+}
+/* Header */
+header,
+header #catalog,
+header #utilities,
+header #catalog div,
+header #utilities div {
+    display: flex;
+}
+header #logo,
+header #catalog,
+header #utilities,
+header #utilities div {
+    width: calc(var(--percentage) / 3);
+}
+header #catalog div {
+    width: calc(var(--percentage) / 2);
+    justify-content: center;
+}
+header #logo a {
+    font-family: var(--chopsic);
+    font-size: calc(var(--percentage) * 2);
+    color: var(--color1);
+    margin-left: calc(var(--percentage) * 0.02);
+    text-decoration: none;
+}
+header #logo a:hover,
+header #catalog div a:hover {
+    text-decoration: underline;
+}
+header #catalog div a {
+    font-family: var(--sourceCodePro);
+    font-size: calc(var(--percentage) * 1.2);
+    text-decoration: none;
+    color: var(--color1);
+    width: unset;
+}
+header #utilities div a {
+    font-size: calc(var(--percentage) * 2);
+    width: unset;
+    text-decoration: none;
+}
+header #utilities div .faUser,
+header #utilities div .faCart,
+header #utilities div .faSearch {
+    color: var(--color1);
+}
+header #utilities div {
+    justify-content: center;
+}
+header {
+    background-color: var(--color2);
+    padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0);
+}
