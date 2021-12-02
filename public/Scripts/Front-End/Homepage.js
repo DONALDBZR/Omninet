@@ -2,7 +2,7 @@
 class Homepage extends React.Component {
     // Render method
     render() {
-        return [<Header />, <Main />];
+        return [<Header />, <Main />, <Footer />];
     }
 }
 // Header class
@@ -42,6 +42,7 @@ class Header extends React.Component {
 }
 // Main class
 class Main extends React.Component {
+    // Render method
     render() {
         return (
             <main>
@@ -57,6 +58,13 @@ class Main extends React.Component {
                 </div>
             </main>
         );
+    }
+}
+// Footer class
+class Footer extends React.Component {
+    // Render method
+    render() {
+        return <footer>Omninet</footer>;
     }
 }
 // Rendering the page

@@ -108,3 +108,10 @@ main #mainItem div div a:hover {
     background: none;
     color: var(--color1);
 }
+footer {
+    text-align: center;
+    background-color: var(--color2);
+    font-family: var(--chopsic);
+    font-size: calc(var(--percentage) * 2);
+    padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0);
+}
