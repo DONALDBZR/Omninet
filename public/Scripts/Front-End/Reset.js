@@ -1,5 +1,5 @@
-// Login class
-class Login extends React.Component {
+// Reset class
+class Reset extends React.Component {
     // Render method
     render() {
         return [<Header />, <Main />, <Footer />];
@@ -47,7 +47,6 @@ class Main extends React.Component {
         super(props);
         this.state = {
             mailAddress: "",
-            password: "",
             success: "",
             message: "",
             url: "",
@@ -75,7 +74,6 @@ class Main extends React.Component {
             method: "POST",
             body: JSON.stringify({
                 mailAddress: this.state.mailAddress,
-                password: this.state.password,
             }),
             headers: {
                 "Content-Type": "application/json",
@@ -103,7 +101,7 @@ class Main extends React.Component {
             <main>
                 <div id="formContainer">
                     <form method="POST" onSubmit={this.handleSubmit.bind(this)}>
-                        <div id="label">Login Form</div>
+                        <div id="label">Reset Password Form</div>
                         <input
                             type="email"
                             name="mailAddress"
@@ -112,22 +110,10 @@ class Main extends React.Component {
                             onChange={this.handleChange.bind(this)}
                             required
                         />
-                        <input
-                            type="password"
-                            name="password"
-                            placeholder="Password"
-                            value={this.state.password}
-                            onChange={this.handleChange.bind(this)}
-                            required
-                        />
-                        <div id="loginButton">
-                            <button>Login</button>
+                        <div id="resetButton">
+                            <button>Reset</button>
                         </div>
                     </form>
-                </div>
-                <div id="accountManagement">
-                    <a href="../Register">Register</a>
-                    <a href="./Reset">Forgot Password?</a>
                 </div>
                 <div id="serverRendering">
                     <h1 id={this.state.success}>{this.state.message}</h1>
@@ -144,4 +130,4 @@ class Footer extends React.Component {
     }
 }
 // Rendering the page
-ReactDOM.render(<Login />, document.getElementById("app"));
+ReactDOM.render(<Reset />, document.getElementById("app"));
