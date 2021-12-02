@@ -16,6 +16,7 @@
     --sourceCodePro: "Source Code Pro";
     --color2: rgb(204, 233, 137);
     --color3: rgb(255, 255, 255);
+    --tablet: 0.729;
 }
 /* Body */
 * {
@@ -134,5 +135,32 @@ footer {
     /* Footer */
     footer {
         font-size: calc(var(--percentage) * 2);
+    }
+}
+/* Responsiveness for tablets */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Header */
+    header #logo a {
+        font-size: calc(var(--percentage) * 2 * var(--tablet));
+    }
+    header #catalog div a {
+        font-size: calc(var(--percentage) * 1.2 * var(--tablet));
+    }
+    header #utilities div a {
+        font-size: calc(var(--percentage) * 2 * var(--tablet));
+    }
+    /* Main */
+    main #mainItem div {
+        padding-top: calc(var(--percentage) * 1.08);
+    }
+    main #mainItem div div h1 {
+        font-size: calc(var(--percentage) * 1.6 * var(--tablet));
+    }
+    main #mainItem div div a {
+        font-size: calc(var(--percentage) * 1.4 * var(--tablet));
+    }
+    /* Footer */
+    footer {
+        font-size: calc(var(--percentage) * 2 * var(--tablet));
     }
 }
