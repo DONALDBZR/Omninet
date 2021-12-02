@@ -207,9 +207,18 @@ footer {
         font-size: calc(var(--percentage) * 2 * var(--mobile));
     }
     /* Main */
-
+    main #formContainer form #label {
+        font-size: calc(var(--percentage) * 2 * var(--mobile));
+    }
+    main #formContainer form input {
+        font-size: calc(var(--percentage) * var(--mobile));
+    }
+    main #accountManagement a {
+        font-size: calc(var(--percentage) * 1.1 * var(--mobile));
+    }
     /* Footer */
     footer {
+        padding-top: calc(var(--percentage) * 1.11);
         font-size: calc(var(--percentage) * 2 * var(--mobile));
     }
 }
