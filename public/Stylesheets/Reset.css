@@ -194,7 +194,7 @@ footer {
     }
     /* Footer */
     footer {
-        padding-top: calc(var(--percentage) * 0.37);
+        padding-top: calc(var(--percentage) * 0.42);
         font-size: calc(var(--percentage) * 2 * var(--tablet));
     }
 }
