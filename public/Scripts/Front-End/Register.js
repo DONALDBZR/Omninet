@@ -69,7 +69,7 @@ class Main extends React.Component {
     // Submit handler method
     handleSubmit(event) {
         // Local variables
-        const delay = 1560;
+        const delay = 2800;
         // Prevent default submission
         event.preventDefault();
         // Generating a POST request
