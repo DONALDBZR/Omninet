@@ -2,7 +2,7 @@
 class Homepage extends React.Component {
     // Render method
     render() {
-        return [<Header />];
+        return [<Header />, <Main />];
     }
 }
 // Header class
@@ -37,6 +37,25 @@ class Header extends React.Component {
                     </div>
                 </nav>
             </header>
+        );
+    }
+}
+// Main class
+class Main extends React.Component {
+    render() {
+        return (
+            <main>
+                <div id="mainItem">
+                    <div>
+                        <div>
+                            <h1>League of Legends - Lee Sin Hoodie</h1>
+                        </div>
+                        <div>
+                            <a href="./Hoodies/LeeSinHoodie">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
         );
     }
 }
