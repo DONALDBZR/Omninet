@@ -1,0 +1,149 @@
+/* Importing fonts */
+@font-face {
+    font-family: "Chopsic";
+    src: url("../Fonts/Chopsic.otf");
+}
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("../Fonts/Source Code Pro - Regular.otf");
+}
+/* Declaration of variables */
+:root {
+    --percentage: 100%;
+    --pixel: 100px;
+    --chopsic: "chopsic";
+    --color1: rgb(0, 0, 0);
+    --sourceCodePro: "Source Code Pro";
+    --color2: rgb(204, 233, 137);
+    --color3: rgb(255, 255, 255);
+    --color4: rgb(25, 130, 25);
+    --tablet: 0.729;
+    --mobile: 0.531441;
+}
+/* Body */
+* {
+    margin: calc(var(--percentage) * 0);
+    width: var(--percentage);
+    font-size: var(--percentage);
+}
+/* Header */
+header,
+header #catalog,
+header #utilities,
+header #catalog div,
+header #utilities div {
+    display: flex;
+}
+header #logo,
+header #catalog,
+header #utilities,
+header #utilities div {
+    width: calc(var(--percentage) / 3);
+}
+header #catalog div {
+    width: calc(var(--percentage) / 2);
+    justify-content: center;
+}
+header #logo a {
+    font-family: var(--chopsic);
+    color: var(--color1);
+    margin-left: calc(var(--percentage) * 0.02);
+    text-decoration: none;
+}
+header #logo a:hover,
+header #catalog div a:hover {
+    text-decoration: underline;
+}
+header #catalog div a {
+    font-family: var(--sourceCodePro);
+    text-decoration: none;
+    color: var(--color1);
+    width: unset;
+}
+header #utilities div a {
+    width: unset;
+    text-decoration: none;
+}
+header #utilities div .faUser,
+header #utilities div .faCart,
+header #utilities div .faSearch {
+    color: var(--color1);
+}
+header #utilities div .faUser:hover,
+header #utilities div .faCart:hover,
+header #utilities div .faSearch:hover {
+    color: var(--color4);
+}
+header #utilities div {
+    justify-content: center;
+}
+header {
+    background-color: var(--color2);
+    padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0);
+}
+/* Main */
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: var(--color2);
+    font-family: var(--chopsic);
+    padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0);
+}
+/* Responsiveness for computers */
+@media screen and (min-width: 1024px) {
+    /* Header */
+    header #logo a {
+        font-size: calc(var(--percentage) * 2);
+    }
+    header #catalog div a {
+        font-size: calc(var(--percentage) * 1.2);
+    }
+    header #utilities div a {
+        font-size: calc(var(--percentage) * 2);
+    }
+    /* Main */
+
+    /* Footer */
+    footer {
+        font-size: calc(var(--percentage) * 2);
+    }
+}
+/* Responsiveness for tablets */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Header */
+    header #logo a {
+        font-size: calc(var(--percentage) * 2 * var(--tablet));
+    }
+    header #catalog div a {
+        font-size: calc(var(--percentage) * 1.2 * var(--tablet));
+    }
+    header #utilities div a {
+        font-size: calc(var(--percentage) * 2 * var(--tablet));
+    }
+    /* Main */
+
+    /* Footer */
+    footer {
+        font-size: calc(var(--percentage) * 2 * var(--tablet));
+    }
+}
+/* Responsiveness for mobiles */
+@media screen and (max-width: 767px) {
+    /* Header */
+    header #logo a {
+        font-size: calc(var(--percentage) * 2 * var(--mobile));
+    }
+    header #catalog div a {
+        font-size: calc(var(--percentage) * 1.2 * var(--mobile));
+    }
+    header #utilities div a {
+        font-size: calc(var(--percentage) * 2 * var(--mobile));
+    }
+    /* Main */
+
+    /* Footer */
+    footer {
+        font-size: calc(var(--percentage) * 2 * var(--mobile));
+    }
+}
