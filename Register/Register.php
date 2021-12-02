@@ -13,7 +13,7 @@ if (json_decode(file_get_contents("php://input")) != null) {
         // Message to be encoded and sent
         $message = array(
             "success" => "failure",
-            "url" => $User->domain . "/Omninet/Login",
+            "url" => $User->domain . "/Omninet/Register",
             "message" => "The form must be completely filled!"
         );
         // Preparing the header for the JSON

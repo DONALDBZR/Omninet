@@ -13,7 +13,7 @@ if (json_decode(file_get_contents("php://input")) != null) {
         // Message to be encoded and sent
         $message = array(
             "success" => "failure",
-            "url" => $User->domain . "/StormySystems2/Login",
+            "url" => $User->domain . "/Omninet/User/Reset",
             "message" => "The form must be filled completely"
         );
         // Preparing the header for the JSON
