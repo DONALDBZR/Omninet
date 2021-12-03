@@ -145,7 +145,7 @@ main #serverRendering h1 {
 main #serverRendering #success {
     color: var(--color6);
 }
-main #serverRendering #failrue {
+main #serverRendering #failure {
     color: var(--color5);
 }
 /* Footer */
