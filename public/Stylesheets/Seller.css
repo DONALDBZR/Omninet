@@ -176,7 +176,18 @@ footer {
         font-size: calc(var(--percentage) * 2 * var(--tablet));
     }
     /* Main */
-
+    main form #label {
+        font-size: calc(var(--percentage) * 2 * var(--tablet));
+    }
+    main form input {
+        font-size: calc(var(--percentage) * var(--tablet));
+    }
+    main form label {
+        font-size: calc(var(--percentage) * 1.1 * var(--tablet));
+    }
+    main #serverRendering #addForm h1 {
+        font-size: calc(var(--percentage) * var(--tablet));
+    }
     /* Footer */
     footer {
         /* padding-top: calc(var(--percentage) * 0.37); */
@@ -196,7 +207,18 @@ footer {
         font-size: calc(var(--percentage) * 2 * var(--mobile));
     }
     /* Main */
-
+    main form #label {
+        font-size: calc(var(--percentage) * 2 * var(--mobile));
+    }
+    main form input {
+        font-size: calc(var(--percentage) * var(--mobile));
+    }
+    main form label {
+        font-size: calc(var(--percentage) * 1.1 * var(--mobile));
+    }
+    main #serverRendering #addForm h1 {
+        font-size: calc(var(--percentage) * var(--mobile));
+    }
     /* Footer */
     footer {
         /* padding-top: calc(var(--percentage) * 1.11); */
