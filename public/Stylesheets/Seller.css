@@ -67,7 +67,67 @@ header {
     padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0);
 }
 /* Main */
-
+main {
+    background-color: var(--color2);
+}
+main form {
+    width: calc(var(--percentage) * 0.8);
+    padding: calc(var(--percentage) * 0) calc(var(--percentage) * 0.1);
+}
+main form #label {
+    font-family: var(--sourceCodePro);
+    text-align: center;
+    padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0);
+}
+main form input {
+    font-family: var(--sourceCodePro);
+    background-color: var(--color2);
+    border: none;
+    border-bottom: calc(var(--pixel) * 0.01) solid var(--color1);
+    margin-bottom: calc(var(--percentage) * 0.01);
+}
+main form label input {
+    display: none;
+}
+main form label {
+    border-bottom: calc(var(--pixel) * 0.01) solid var(--color1);
+    margin-bottom: calc(var(--percentage) * 0.01);
+    cursor: pointer;
+}
+main form label .faUpload {
+    color: var(--color1);
+}
+main form label .faUpload:hover {
+    color: var(--color4);
+}
+main form #addButton {
+    display: flex;
+    justify-content: center;
+}
+main form #addButton button {
+    width: unset;
+    padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0.02);
+    font-family: var(--chopsic);
+    color: var(--color2);
+    background-color: var(--color1);
+    border: none;
+    cursor: pointer;
+}
+main form #addButton button:hover {
+    color: var(--color1);
+    background-color: var(--color2);
+}
+main #serverRendering #addForm h1 {
+    font-family: var(--chopsic);
+    font-weight: bold;
+    width: unset;
+}
+main #serverRendering #addForm #success {
+    color: var(--color6);
+}
+main #serverRendering #addForm #failure {
+    color: var(--color6);
+}
 /* Footer */
 footer {
     text-align: center;
@@ -85,7 +145,18 @@ footer {
         font-size: calc(var(--percentage) * 2);
     }
     /* Main */
-
+    main form #label {
+        font-size: calc(var(--percentage) * 2);
+    }
+    main form input {
+        font-size: var(--percentage);
+    }
+    main form label {
+        font-size: calc(var(--percentage) * 1.1);
+    }
+    main #serverRendering #addForm h1 {
+        font-size: var(--percentage);
+    }
     /* Footer */
     footer {
         /* padding-top: calc(var(--percentage) * 0.24); */
