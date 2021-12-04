@@ -3,6 +3,6 @@
 require $_SERVER['DOCUMENT_ROOT'] . '/Omninet/Item.php';
 // Instantiating Item
 $Item = new Item();
-// Fetching the items
-$Item->showItem();
+// Fetching the item with the highest price
+$Item->homepageShowItem();
 ?>

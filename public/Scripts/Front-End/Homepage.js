@@ -31,23 +31,49 @@ class Header extends React.Component {
 }
 // Main class
 class Main extends React.Component {
+    // Constructor method
+    constructor(props) {
+        super(props);
+        this.state = {
+            content: "",
+            data: [],
+        };
+    }
+    // Retrieve Data method
+    retrieveData() {
+        // Generating a GET request
+        fetch("./HomepageGET.php", {
+            method: "GET",
+        })
+            .then((response) => response.json())
+            .then((data) =>
+                this.setState({
+                    content: data.content,
+                    data: data.data,
+                })
+            );
+    }
+    // Component Did Mount method
+    componentDidMount() {
+        this.retrieveData();
+    }
     // Render method
     render() {
         return (
             <main>
-                <div id="mainItem">
+                <div id={this.state.content}>
                     <div>
                         <img
-                            src="./public/Images/Items/(1135).jpg"
-                            alt="Main Item"
+                            src={this.state.data.ItemImage}
+                            alt={this.state.data.ImageId}
                         />
                     </div>
                     <div>
                         <div>
-                            <h1>League of Legends - Lee Sin Hoodie</h1>
+                            <h1>{this.state.data.ItemName}</h1>
                         </div>
                         <div>
-                            <a href="./Hoodies/LeeSinHoodie">Shop Now</a>
+                            <a href="./Buyer">Shop Now</a>
                         </div>
                     </div>
                 </div>

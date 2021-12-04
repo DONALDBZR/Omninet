@@ -66,20 +66,20 @@ header {
     padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0);
 }
 /* Main */
-main #mainItem div {
+main #data div {
     display: flex;
     justify-content: center;
 }
-main #mainItem div div {
+main #data div div {
     padding: calc(var(--percentage) * 0);
     justify-content: center;
 }
-main #mainItem div div h1 {
+main #data div div h1 {
     font-family: var(--sourceCodePro);
     font-weight: bold;
     text-align: center;
 }
-main #mainItem div div a {
+main #data div div a {
     width: unset;
     text-decoration: none;
     background-color: var(--color1);
@@ -87,7 +87,7 @@ main #mainItem div div a {
     padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0.02);
     font-family: var(--chopsic);
 }
-main #mainItem div div a:hover {
+main #data div div a:hover {
     background: none;
     color: var(--color1);
 }
@@ -108,14 +108,14 @@ footer {
         font-size: calc(var(--percentage) * 2);
     }
     /* Main */
-    main #mainItem div img {
+    main #data div img {
         width: auto;
         height: calc(var(--pixel) * 5.7);
     }
-    main #mainItem div div h1 {
+    main #data div div h1 {
         font-size: calc(var(--percentage) * 2);
     }
-    main #mainItem div div a {
+    main #data div div a {
         font-size: calc(var(--percentage) * 1.4);
     }
     /* Footer */
@@ -133,14 +133,14 @@ footer {
         font-size: calc(var(--percentage) * 2 * var(--tablet));
     }
     /* Main */
-    main #mainItem div img {
+    main #data div img {
         width: auto;
         height: calc(var(--pixel) * 4.54);
     }
-    main #mainItem div div h1 {
+    main #data div div h1 {
         font-size: calc(var(--percentage) * 1.6 * var(--tablet));
     }
-    main #mainItem div div a {
+    main #data div div a {
         font-size: calc(var(--percentage) * 1.4 * var(--tablet));
     }
     /* Footer */
@@ -158,14 +158,14 @@ footer {
         font-size: calc(var(--percentage) * 2 * var(--mobile));
     }
     /* Main */
-    main #mainItem div img {
+    main #data div img {
         width: auto;
         height: calc(var(--pixel) * 3.1);
     }
-    main #mainItem div div h1 {
+    main #data div div h1 {
         font-size: calc(var(--percentage) * 0.9 * var(--mobile));
     }
-    main #mainItem div div a {
+    main #data div div a {
         font-size: calc(var(--percentage) * 1.4 * var(--mobile));
     }
     /* Footer */
