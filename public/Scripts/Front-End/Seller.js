@@ -45,22 +45,6 @@ class Main extends React.Component {
             data: [],
         };
     }
-    // Check Session method
-    checkSession() {
-        // Local variables
-        const delay = 200;
-        // Generating a GET request
-        fetch("./index.php", {
-            method: "GET",
-        })
-            .then((response) => response.json())
-            .then((data) =>
-                this.setState({
-                    url: data.url,
-                })
-            )
-            .then(() => this.redirector(delay));
-    }
     // Retrieve Data method
     retrieveData() {
         // Generating a GET request
@@ -120,8 +104,6 @@ class Main extends React.Component {
     }
     // Component Did Mount method
     componentDidMount() {
-        // Checking the session
-        this.checkSession();
         // Retrieving the data from the database
         this.retrieveData();
     }
