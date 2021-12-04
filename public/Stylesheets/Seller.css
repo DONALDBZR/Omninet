@@ -185,8 +185,8 @@ footer {
         width: calc(var(--percentage) * 0.3133);
     }
     main #serverRendering #data .dataItem .dataItemImage img {
-        height: calc(var(--pixel) * (423 / 100));
-        width: auto;
+        height: auto;
+        width: var(--percentage);
     }
     main #serverRendering #data .dataItem .dataItemData div h1 {
         font-size: calc(var(--percentage) * 0.6);
