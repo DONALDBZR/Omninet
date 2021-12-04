@@ -3,6 +3,8 @@
 require $_SERVER['DOCUMENT_ROOT'] . '/Omninet/Item.php';
 // Instantiating Item
 $Item = new Item();
+// Fetching the items
+$Item->showItemMethod();
 // If-Statement to verify whether there is a JSON
 if (json_decode(file_get_contents("php://input")) != null) {
     // If-statement to verify whether the JSON does not have any null value

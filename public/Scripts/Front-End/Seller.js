@@ -35,11 +35,29 @@ class Main extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            // Input
             name: "",
+            // Output
             success: "",
             message: "",
             url: "",
+            content: "",
+            data: [],
         };
+    }
+    // Retrieve Data method
+    retrieveData() {
+        // Generating a GET request
+        fetch("./Seller.php", {
+            method: "GET",
+        })
+            .then((response) => response.json())
+            .then((data) =>
+                this.setState({
+                    content: data.content,
+                    data: data.data,
+                })
+            );
     }
     // Change handler method
     handleChange(event) {
@@ -84,6 +102,10 @@ class Main extends React.Component {
             window.location.href = this.state.url;
         }, delay);
     }
+    // Component Did Mount method
+    componentDidMount() {
+        this.retrieveData();
+    }
     // Render method
     render() {
         return (
@@ -106,7 +128,26 @@ class Main extends React.Component {
                     <div id="addForm">
                         <h1 id={this.state.success}>{this.state.message}</h1>
                     </div>
-                    <div id="data"></div>
+                    <div id={this.state.content}>
+                        {this.state.data.map((data) => (
+                            <div class="dataItem">
+                                <div class="dataItemImage">
+                                    <img
+                                        src={data.ItemImage}
+                                        alt={data.ItemId}
+                                    />
+                                </div>
+                                <div class="dataItemData">
+                                    <div>
+                                        <h1>{data.ItemName}</h1>
+                                    </div>
+                                    <div>
+                                        <h1>$ {data.ItemPrice}</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </main>
         );

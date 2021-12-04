@@ -132,6 +132,26 @@ main #serverRendering #addForm #success {
 main #serverRendering #addForm #failure {
     color: var(--color5);
 }
+main #serverRendering #data {
+    display: flex;
+    flex-wrap: wrap;
+}
+main #serverRendering #data .dataItem {
+    padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0.01);
+}
+main #serverRendering #data .dataItem .dataItemData {
+    display: flex;
+}
+main #serverRendering #data .dataItem .dataItemData div {
+    width: calc(var(--percentage) / 2);
+    display: flex;
+    justify-content: center;
+}
+main #serverRendering #data .dataItem .dataItemData div h1 {
+    font-family: var(--sourceCodePro);
+    width: unset;
+    font-weight: bold;
+}
 /* Footer */
 footer {
     text-align: center;
@@ -160,6 +180,16 @@ footer {
     }
     main #serverRendering #addForm h1 {
         font-size: var(--percentage);
+    }
+    main #serverRendering #data .dataItem {
+        width: calc(var(--percentage) * 0.3133);
+    }
+    main #serverRendering #data .dataItem .dataItemImage img {
+        height: calc(var(--pixel) * (423 / 100));
+        width: auto;
+    }
+    main #serverRendering #data .dataItem .dataItemData div h1 {
+        font-size: calc(var(--percentage) * 0.6);
     }
     /* Footer */
     footer {

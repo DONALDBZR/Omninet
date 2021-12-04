@@ -49,7 +49,7 @@ class Main extends React.Component {
                 <div id="mainItem">
                     <div>
                         <img
-                            src="./public/Images/Items/mock-hoodie-new_200056db-691b-4ca5-afcf-b3c2163694aa_1024x1024@2x.jpg"
+                            src="./public/Images/Items/(1135).jpg"
                             alt="Main Item"
                         />
                     </div>
