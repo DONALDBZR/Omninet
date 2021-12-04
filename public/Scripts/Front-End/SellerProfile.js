@@ -62,24 +62,22 @@ class Main extends React.Component {
         return (
             <main>
                 <div id={this.state.content}>
-                    {this.state.data.map((data) => (
-                        <div id="dataItem">
-                            <div id="dataItemData">
-                                <div>
-                                    <h1>First Name:</h1>
-                                    <h1>{data.firstName}</h1>
-                                </div>
-                                <div>
-                                    <h1>Last Name:</h1>
-                                    <h1>{data.lastName}</h1>
-                                </div>
-                                <div>
-                                    <h1>Mail Address:</h1>
-                                    <h1>{data.mailAddress}</h1>
-                                </div>
+                    <div id="dataItem">
+                        <div id="dataItemData">
+                            <div>
+                                <h1>First Name:</h1>
+                                <h1>{this.state.data.UserFirstName}</h1>
+                            </div>
+                            <div>
+                                <h1>Last Name:</h1>
+                                <h1>{this.state.data.UserLastName}</h1>
+                            </div>
+                            <div>
+                                <h1>Mail Address:</h1>
+                                <h1>{this.state.data.UserMailAddress}</h1>
                             </div>
                         </div>
-                    ))}
+                    </div>
                 </div>
             </main>
         );
