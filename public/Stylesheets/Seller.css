@@ -117,6 +117,10 @@ main form #addButton button:hover {
     color: var(--color1);
     background-color: var(--color2);
 }
+main #serverRendering #addForm {
+    display: flex;
+    justify-content: center;
+}
 main #serverRendering #addForm h1 {
     font-family: var(--chopsic);
     font-weight: bold;
@@ -126,7 +130,7 @@ main #serverRendering #addForm #success {
     color: var(--color6);
 }
 main #serverRendering #addForm #failure {
-    color: var(--color6);
+    color: var(--color5);
 }
 /* Footer */
 footer {
@@ -177,7 +181,7 @@ footer {
     }
     /* Main */
     main form #label {
-        font-size: calc(var(--percentage) * 2 * var(--tablet));
+        font-size: calc(var(--percentage) * 2 * var(--tabletgit merge));
     }
     main form input {
         font-size: calc(var(--percentage) * var(--tablet));

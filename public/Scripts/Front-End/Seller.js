@@ -36,7 +36,6 @@ class Main extends React.Component {
         super(props);
         this.state = {
             name: "",
-            image: "",
             success: "",
             message: "",
             url: "",
@@ -56,7 +55,7 @@ class Main extends React.Component {
     // Submit handler method
     handleSubmit(event) {
         // Local variables
-        const delay = 1560;
+        const delay = 1800;
         // Prevent default submission
         event.preventDefault();
         // Generating a POST request
@@ -64,7 +63,6 @@ class Main extends React.Component {
             method: "POST",
             body: JSON.stringify({
                 name: this.state.name,
-                image: this.state.image,
             }),
             headers: {
                 "Content-Type": "application/json",
@@ -90,7 +88,7 @@ class Main extends React.Component {
     render() {
         return (
             <main>
-                <form method="POST" enctype="multipart/form-data">
+                <form method="POST" onSubmit={this.handleSubmit.bind(this)}>
                     <div id="label">Adding items</div>
                     <input
                         type="text"
@@ -100,16 +98,6 @@ class Main extends React.Component {
                         onChange={this.handleChange.bind(this)}
                         required
                     />
-                    <label class="fas fa-upload faUpload">
-                        <input
-                            type="file"
-                            name="image"
-                            accept="image/*"
-                            value={this.state.image}
-                            onChange={this.handleChange.bind(this)}
-                            required
-                        />
-                    </label>
                     <div id="addButton">
                         <button>Add</button>
                     </div>
