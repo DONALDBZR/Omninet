@@ -45,10 +45,26 @@ class Main extends React.Component {
             data: [],
         };
     }
+    // Check Session method
+    checkSession() {
+        // Local variables
+        const delay = 200;
+        // Generating a GET request
+        fetch("./index.php", {
+            method: "GET",
+        })
+            .then((response) => response.json())
+            .then((data) =>
+                this.setState({
+                    url: data.url,
+                })
+            )
+            .then(() => this.redirector(delay));
+    }
     // Retrieve Data method
     retrieveData() {
         // Generating a GET request
-        fetch("./Seller.php", {
+        fetch("./SellerGET.php", {
             method: "GET",
         })
             .then((response) => response.json())
@@ -77,7 +93,7 @@ class Main extends React.Component {
         // Prevent default submission
         event.preventDefault();
         // Generating a POST request
-        fetch("./Seller.php", {
+        fetch("./SellerPOST.php", {
             method: "POST",
             body: JSON.stringify({
                 name: this.state.name,
@@ -104,6 +120,9 @@ class Main extends React.Component {
     }
     // Component Did Mount method
     componentDidMount() {
+        // Checking the session
+        this.checkSession();
+        // Retrieving the data from the database
         this.retrieveData();
     }
     // Render method

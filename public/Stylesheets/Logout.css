@@ -1,0 +1,98 @@
+/* Importing fonts */
+@font-face {
+    font-family: "Chopsic";
+    src: url("../Fonts/Chopsic.otf");
+}
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("../Fonts/Source Code Pro - Regular.otf");
+}
+/* Declaration of variables */
+:root {
+    --percentage: 100%;
+    --pixel: 100px;
+    --chopsic: "chopsic";
+    --color1: rgb(0, 0, 0);
+    --sourceCodePro: "Source Code Pro";
+    --color2: rgb(204, 233, 137);
+    --color3: rgb(255, 255, 255);
+    --color4: rgb(25, 130, 25);
+    --tablet: 0.729;
+    --mobile: 0.531441;
+    --color5: rgb(255, 0, 0);
+    --color6: rgb(0, 255, 0);
+}
+/* Body */
+* {
+    margin: calc(var(--percentage) * 0);
+    width: var(--percentage);
+    font-size: var(--percentage);
+}
+/* Header */
+header {
+    text-align: center;
+    background-color: var(--color2);
+    font-family: var(--chopsic);
+    padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0);
+}
+/* Main */
+main {
+    text-align: center;
+    background-color: var(--color2);
+    font-family: var(--sourceCodePro);
+}
+/* Footer */
+footer {
+    text-align: center;
+    background-color: var(--color2);
+    font-family: var(--chopsic);
+    padding-bottom: calc(var(--percentage) * 0.01);
+}
+/* Responsiveness for computers */
+@media screen and (min-width: 1024px) {
+    /* Header */
+    header {
+        font-size: calc(var(--percentage) * 2);
+    }
+    /* Main */
+    main {
+        font-size: calc(var(--percentage) * 2);
+    }
+    /* Footer */
+    footer {
+        padding-top: calc(var(--percentage) * 0.35);
+        font-size: calc(var(--percentage) * 2);
+    }
+}
+/* Responsiveness for tablets */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Header */
+    header {
+        font-size: calc(var(--percentage) * 2 * var(--tablet));
+    }
+    /* Main */
+    main {
+        font-size: calc(var(--percentage) * 2 * var(--tablet));
+    }
+    /* Footer */
+    footer {
+        padding-top: calc(var(--percentage) * 0.51);
+        font-size: calc(var(--percentage) * 2 * var(--tablet));
+    }
+}
+/* Responsiveness for mobiles */
+@media screen and (max-width: 767px) {
+    /* Header */
+    header {
+        font-size: calc(var(--percentage) * 2 * var(--mobile));
+    }
+    /* Main */
+    main {
+        font-size: calc(var(--percentage) * 2 * var(--mobile));
+    }
+    /* Footer */
+    footer {
+        padding-top: calc(var(--percentage) * 1.34);
+        font-size: calc(var(--percentage) * 2 * var(--mobile));
+    }
+}
