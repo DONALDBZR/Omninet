@@ -28,20 +28,16 @@
 }
 /* Header */
 header,
-header #catalog,
-header #utilities,
-header #catalog div,
-header #utilities div {
+header nav,
+header nav div {
     display: flex;
 }
 header #logo,
-header #catalog,
-header #utilities,
-header #utilities div {
-    width: calc(var(--percentage) / 3);
+header nav,
+header nav div {
+    width: calc(var(--percentage) / 2);
 }
 header #catalog div {
-    width: calc(var(--percentage) / 2);
     justify-content: center;
 }
 header #logo a {
@@ -50,32 +46,20 @@ header #logo a {
     margin-left: calc(var(--percentage) * 0.02);
     text-decoration: none;
 }
-header #logo a:hover,
-header #catalog div a:hover {
+header #logo a:hover {
     text-decoration: underline;
 }
-header #catalog div a {
-    font-family: var(--sourceCodePro);
-    text-decoration: none;
-    color: var(--color1);
-    width: unset;
-}
-header #utilities div a {
+header nav div a {
     width: unset;
     text-decoration: none;
 }
-header #utilities div .faUser,
-header #utilities div .faCart,
-header #utilities div .faSearch {
+header nav div .faUser,
+header nav div .faCart {
     color: var(--color1);
 }
-header #utilities div .faUser:hover,
-header #utilities div .faCart:hover,
-header #utilities div .faSearch:hover {
+header nav div .faUser:hover,
+header nav div .faCart:hover {
     color: var(--color4);
-}
-header #utilities div {
-    justify-content: center;
 }
 header {
     background-color: var(--color2);
@@ -120,10 +104,7 @@ footer {
     header #logo a {
         font-size: calc(var(--percentage) * 2);
     }
-    header #catalog div a {
-        font-size: calc(var(--percentage) * 1.2);
-    }
-    header #utilities div a {
+    header nav div a {
         font-size: calc(var(--percentage) * 2);
     }
     /* Main */
@@ -148,10 +129,7 @@ footer {
     header #logo a {
         font-size: calc(var(--percentage) * 2 * var(--tablet));
     }
-    header #catalog div a {
-        font-size: calc(var(--percentage) * 1.2 * var(--tablet));
-    }
-    header #utilities div a {
+    header nav div a {
         font-size: calc(var(--percentage) * 2 * var(--tablet));
     }
     /* Main */
@@ -176,10 +154,7 @@ footer {
     header #logo a {
         font-size: calc(var(--percentage) * 2 * var(--mobile));
     }
-    header #catalog div a {
-        font-size: calc(var(--percentage) * 1.2 * var(--mobile));
-    }
-    header #utilities div a {
+    header nav div a {
         font-size: calc(var(--percentage) * 2 * var(--mobile));
     }
     /* Main */
