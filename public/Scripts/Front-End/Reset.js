@@ -14,7 +14,6 @@ class Header extends React.Component {
             domain: "http://stormysystem.ddns.net/Omninet",
         };
     }
-
     // Render method
     render() {
         return (
@@ -46,7 +45,9 @@ class Main extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            // Input
             mailAddress: "",
+            // Output
             success: "",
             message: "",
             url: "",
