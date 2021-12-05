@@ -19,6 +19,8 @@
     --color4: rgb(25, 130, 25);
     --tablet: 0.729;
     --mobile: 0.531441;
+    --color5: rgb(255, 0, 0);
+    --color6: rgb(0, 255, 0);
 }
 /* Body */
 * {
@@ -33,12 +35,8 @@ header nav div {
     display: flex;
 }
 header #logo,
-header nav,
-header nav div {
+header nav {
     width: calc(var(--percentage) / 2);
-}
-header nav div {
-    justify-content: center;
 }
 header #logo a {
     font-family: var(--chopsic);
@@ -54,49 +52,28 @@ header nav div a {
     text-decoration: none;
 }
 header nav div .faUser,
-header nav div .faCart {
+header nav div .faLogout {
     color: var(--color1);
 }
 header nav div .faUser:hover,
-header nav div .faCart:hover {
+header nav div .faLogout:hover {
     color: var(--color4);
+}
+header nav div {
+    justify-content: center;
 }
 header {
     background-color: var(--color2);
     padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0);
 }
 /* Main */
-main #data div {
-    display: flex;
-    justify-content: center;
-}
-main #data div div {
-    padding: calc(var(--percentage) * 0);
-    justify-content: center;
-}
-main #data div div h1 {
-    font-family: var(--sourceCodePro);
-    font-weight: bold;
-    text-align: center;
-}
-main #data div div a {
-    width: unset;
-    text-decoration: none;
-    background-color: var(--color1);
-    color: var(--color3);
-    padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0.02);
-    font-family: var(--chopsic);
-}
-main #data div div a:hover {
-    background: none;
-    color: var(--color1);
-}
+
 /* Footer */
 footer {
     text-align: center;
     background-color: var(--color2);
     font-family: var(--chopsic);
-    padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0);
+    padding-bottom: calc(var(--percentage) * 0.01);
 }
 /* Responsiveness for computers */
 @media screen and (min-width: 1024px) {
@@ -108,18 +85,10 @@ footer {
         font-size: calc(var(--percentage) * 2);
     }
     /* Main */
-    main #data div img {
-        width: auto;
-        height: calc(var(--pixel) * 5.7);
-    }
-    main #data div div h1 {
-        font-size: calc(var(--percentage) * 2);
-    }
-    main #data div div a {
-        font-size: calc(var(--percentage) * 1.4);
-    }
+
     /* Footer */
     footer {
+        /* padding-top: calc(var(--percentage) * 0.24); */
         font-size: calc(var(--percentage) * 2);
     }
 }
@@ -129,22 +98,17 @@ footer {
     header #logo a {
         font-size: calc(var(--percentage) * 2 * var(--tablet));
     }
-    header nav div a {
+    header #catalog div a {
+        font-size: calc(var(--percentage) * 1.2 * var(--tablet));
+    }
+    header #utilities div a {
         font-size: calc(var(--percentage) * 2 * var(--tablet));
     }
     /* Main */
-    main #data div img {
-        width: auto;
-        height: calc(var(--pixel) * 4.54);
-    }
-    main #data div div h1 {
-        font-size: calc(var(--percentage) * 1.6 * var(--tablet));
-    }
-    main #data div div a {
-        font-size: calc(var(--percentage) * 1.4 * var(--tablet));
-    }
+
     /* Footer */
     footer {
+        /* padding-top: calc(var(--percentage) * 0.37); */
         font-size: calc(var(--percentage) * 2 * var(--tablet));
     }
 }
@@ -154,22 +118,17 @@ footer {
     header #logo a {
         font-size: calc(var(--percentage) * 2 * var(--mobile));
     }
-    header nav div a {
+    header #catalog div a {
+        font-size: calc(var(--percentage) * 1.2 * var(--mobile));
+    }
+    header #utilities div a {
         font-size: calc(var(--percentage) * 2 * var(--mobile));
     }
     /* Main */
-    main #data div img {
-        width: auto;
-        height: calc(var(--pixel) * 3.1);
-    }
-    main #data div div h1 {
-        font-size: calc(var(--percentage) * 0.9 * var(--mobile));
-    }
-    main #data div div a {
-        font-size: calc(var(--percentage) * 1.4 * var(--mobile));
-    }
+
     /* Footer */
     footer {
+        /* padding-top: calc(var(--percentage) * 1.11); */
         font-size: calc(var(--percentage) * 2 * var(--mobile));
     }
 }

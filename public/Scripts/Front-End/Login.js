@@ -14,26 +14,15 @@ class Header extends React.Component {
                 <div id="logo">
                     <a href="../">Omninet</a>
                 </div>
-                <nav id="catalog">
-                    <div>
-                        <a href="../Shop">Shops</a>
-                    </div>
-                    <div>
-                        <a href="../Brand">Brands</a>
-                    </div>
-                </nav>
-                <nav id="utilities">
-                    <div>
-                        <a href="./" class="fas fa-user faUser"></a>
-                    </div>
-                    <div>
-                        <a href="../Search" class="fas fa-search faSearch"></a>
-                    </div>
+                <nav>
                     <div>
                         <a
-                            href="../Cart"
+                            href="../Shop"
                             class="fas fa-shopping-cart faCart"
                         ></a>
+                    </div>
+                    <div>
+                        <a href="./" class="fas fa-user faUser"></a>
                     </div>
                 </nav>
             </header>
@@ -46,14 +35,16 @@ class Main extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            // Input
             mailAddress: "",
             password: "",
+            // Output
             success: "",
             message: "",
             url: "",
         };
     }
-    // change handler method
+    // Change handler method
     handleChange(event) {
         // Local variables
         const target = event.target;
