@@ -7,32 +7,32 @@ class Reset extends React.Component {
 }
 // Header class
 class Header extends React.Component {
+    // Constructor method
+    constructor(props) {
+        super(props);
+        this.state = {
+            domain: "http://stormysystem.ddns.net/Omninet",
+        };
+    }
+
     // Render method
     render() {
         return (
             <header>
                 <div id="logo">
-                    <a href="../">Omninet</a>
+                    <a href={this.state.domain}>Omninet</a>
                 </div>
-                <nav id="catalog">
+                <nav>
                     <div>
-                        <a href="../Shop">Shops</a>
-                    </div>
-                    <div>
-                        <a href="../Brand">Brands</a>
-                    </div>
-                </nav>
-                <nav id="utilities">
-                    <div>
-                        <a href="./" class="fas fa-user faUser"></a>
-                    </div>
-                    <div>
-                        <a href="../Search" class="fas fa-search faSearch"></a>
+                        <a
+                            href={this.state.domain + "/Shop"}
+                            class="fas fa-shopping-cart faCart"
+                        ></a>
                     </div>
                     <div>
                         <a
-                            href="../Cart"
-                            class="fas fa-shopping-cart faCart"
+                            href={this.state.domain + "/User"}
+                            class="fas fa-user faUser"
                         ></a>
                     </div>
                 </nav>
