@@ -211,7 +211,7 @@ footer {
     }
     /* Main */
     main form #label {
-        font-size: calc(var(--percentage) * 2 * var(--tabletgit merge));
+        font-size: calc(var(--percentage) * 2 * var(--tablet));
     }
     main form input {
         font-size: calc(var(--percentage) * var(--tablet));
@@ -221,6 +221,16 @@ footer {
     }
     main #serverRendering #addForm h1 {
         font-size: calc(var(--percentage) * var(--tablet));
+    }
+    main #serverRendering #data .dataItem {
+        width: calc(var(--percentage) * 0.3133);
+    }
+    main #serverRendering #data .dataItem .dataItemImage img {
+        height: auto;
+        width: var(--percentage);
+    }
+    main #serverRendering #data .dataItem .dataItemData div h1 {
+        font-size: calc(var(--percentage) * 0.6 * var(--tablet));
     }
     /* Footer */
     footer {
@@ -252,6 +262,16 @@ footer {
     }
     main #serverRendering #addForm h1 {
         font-size: calc(var(--percentage) * var(--mobile));
+    }
+    main #serverRendering #data .dataItem {
+        width: calc(var(--percentage) * 0.3133);
+    }
+    main #serverRendering #data .dataItem .dataItemImage img {
+        height: auto;
+        width: var(--percentage);
+    }
+    main #serverRendering #data .dataItem .dataItemData div h1 {
+        font-size: calc(var(--percentage) * 0.6 * var(--mobile));
     }
     /* Footer */
     footer {
