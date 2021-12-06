@@ -67,7 +67,60 @@ header {
     padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0);
 }
 /* Main */
-
+main {
+    background-color: var(--color2);
+}
+main #serverRendering #data {
+    display: flex;
+    flex-wrap: wrap;
+}
+main #serverRendering #data form {
+    padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0.01);
+}
+main #serverRendering #data form .dataItemData {
+    display: flex;
+}
+main #serverRendering #data form .dataItemData div {
+    width: calc(var(--percentage) / 2);
+    display: flex;
+    justify-content: center;
+}
+main #serverRendering #data form .dataItemData div h1,
+main #serverRendering #data form .dataItemName {
+    font-family: var(--sourceCodePro);
+    width: unset;
+    font-weight: bold;
+}
+main #serverRendering #data form .dataItemName {
+    text-align: center;
+}
+main #serverRendering #data form .cartAction {
+    display: flex;
+}
+main #serverRendering #data form .cartAction div input {
+    background-color: var(--color2);
+    font-family: var(--sourceCodePro);
+    font-weight: bold;
+    border: none;
+    border-bottom: calc(var(--pixel) * (1 / 100)) solid var(--color1);
+}
+main #serverRendering #data form .cartAction div {
+    display: flex;
+    justify-content: center;
+}
+main #serverRendering #data form .cartAction div button {
+    font-family: var(--chopsic);
+    color: var(--color2);
+    background-color: var(--color1);
+    padding: calc(var(--percentage) * 0.01) calc(var(--percentage) * 0.02);
+    width: unset;
+    border: none;
+    cursor: pointer;
+}
+main #serverRendering #data form .cartAction div button:hover {
+    color: var(--color1);
+    background-color: var(--color2);
+}
 /* Footer */
 footer {
     text-align: center;
@@ -85,7 +138,19 @@ footer {
         font-size: calc(var(--percentage) * 2);
     }
     /* Main */
-
+    main #serverRendering #data form {
+        width: calc(var(--percentage) * 0.3133);
+    }
+    main #serverRendering #data form .dataItem img {
+        height: auto;
+        width: var(--percentage);
+    }
+    main #serverRendering #data form .dataItemName {
+        font-size: var(--percentage);
+    }
+    main #serverRendering #data form .cartAction div input {
+        font-size: var(--percentage);
+    }
     /* Footer */
     footer {
         /* padding-top: calc(var(--percentage) * 0.24); */
