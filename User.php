@@ -191,9 +191,9 @@ class User {
             // Ensuring that PHPMailer is called from a .html file.
             $this->PHPMailer->IsHTML(true);
             // Sender's mail address.
-            $this->PHPMailer->Username = "1111MailAddress";
+            $this->PHPMailer->Username = "GMAIL";
             // Sender's password
-            $this->PHPMailer->Password = "mailAddress_password";
+            $this->PHPMailer->Password = "PASS";
             // Assigning sender as a parameter in the sender's zone.
             $this->PHPMailer->setFrom($this->PHPMailer->Username);
             // Assinging the receiver mail's address which is retrieved from the User class.
@@ -265,9 +265,9 @@ class User {
             // Assuring that the mail is sent from HTML mode
             $this->Mail->IsHTML(true);
             // Setting the sender's mail address
-            $this->Mail->Username = "1111MailAddress";
+            $this->Mail->Username = "GMAIL";
             // Setting the sender's password
-            $this->Mail->Password = "mailAddress_password";
+            $this->Mail->Password = "PASS";
             // Assigning the sender's mail address from PHPMailer::Username
             $this->Mail->setFrom($this->Mail->Username);
             // Assigning the recipient address from User::getMailAddress()

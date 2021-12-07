@@ -133,5 +133,28 @@ class Cart {
             header("refresh: 3.467; url=" . $this->User->domain . "/Omninet/Shop/Cart");
         }
     }
+    // Show Content method
+    public function showContent() {
+        // Storing data for further processing
+        $this->setUser($_SESSION['mailAddress']);
+        // Selecting data from the database
+        $this->API->query("SELECT * FROM Omninet.Cart WHERE CartUser = :CartUser");
+        $this->API->bind(":CartUser", $this->getUser());
+        $this->API->execute();
+        // For-loop to iterate all the items to find the net worth of the Cart
+        for ($index = 0; $index < count($this->API->resultSet()); $index++) { 
+            // Calculating the sumation of the net worth of the cart
+            $this->setNetValue($this->getNetValue() + ($this->API->resultSet()[$index]['CartAmount'] * $this->API->resultSet()[$index]['CartPrice']));
+        }
+        // Message to be encoded and sent
+        $message = array(
+            "content" => "data",
+            "data" => $this->getNetValue()
+        );
+        // Preparing the header for the JSON
+        header('Content-Type: application/json');
+        // Sending the JSON
+        echo json_encode($message);
+    }
 }
 ?>

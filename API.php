@@ -3,8 +3,8 @@
 class API {
     // Class variables
     private $dataSourceName = "mysql:dbname=Omninet;host=stormysystem.ddns.net:3306";
-    private $username = "DBH";
-    private $password = "PASSWORD";
+    private $username = "";
+    private $password = "";
     private $databaseHandler;
     private $statement;
     // Constructor method

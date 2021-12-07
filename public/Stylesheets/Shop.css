@@ -52,11 +52,13 @@ header nav div a {
     text-decoration: none;
 }
 header nav div .faUser,
-header nav div .faLogout {
+header nav div .faLogout,
+header nav div .faCart {
     color: var(--color1);
 }
 header nav div .faUser:hover,
-header nav div .faLogout:hover {
+header nav div .faLogout:hover,
+header nav div .faCart:hover {
     color: var(--color4);
 }
 header nav div {

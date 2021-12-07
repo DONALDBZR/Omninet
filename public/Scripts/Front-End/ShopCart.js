@@ -16,13 +16,10 @@ class Header extends React.Component {
                 </div>
                 <nav>
                     <div>
-                        <a
-                            href="../Cart"
-                            class="fas fa-shopping-cart faCart"
-                        ></a>
+                        <a href="./" class="fas fa-shopping-cart faCart"></a>
                     </div>
                     <div>
-                        <a href="./" class="fas fa-user faUser"></a>
+                        <a href="../Profile" class="fas fa-user faUser"></a>
                     </div>
                     <div>
                         <a
@@ -42,13 +39,13 @@ class Main extends React.Component {
         super(props);
         this.state = {
             content: "",
-            data: [],
+            data: 0.0,
         };
     }
     // Retrieve Data method
     retrieveData() {
         // Generating a GET request
-        fetch("./ShopProfile.php", {
+        fetch("./ShopCartGET.php", {
             method: "GET",
         })
             .then((response) => response.json())
@@ -61,6 +58,7 @@ class Main extends React.Component {
     }
     // Component Did Mount method
     componentDidMount() {
+        // Retrieving data from the database
         this.retrieveData();
     }
     // Render method
@@ -68,19 +66,12 @@ class Main extends React.Component {
         return (
             <main>
                 <div id={this.state.content}>
-                    <div id="dataItem">
-                        <div id="dataItemData">
+                    <div class="dataItem">
+                        <div class="dataItemData">
                             <div>
-                                <h1>First Name:</h1>
-                                <h1>{this.state.data.UserFirstName}</h1>
-                            </div>
-                            <div>
-                                <h1>Last Name:</h1>
-                                <h1>{this.state.data.UserLastName}</h1>
-                            </div>
-                            <div>
-                                <h1>Mail Address:</h1>
-                                <h1>{this.state.data.UserMailAddress}</h1>
+                                <h1>
+                                    Net Worth: $ {this.state.data.toFixed(2)}
+                                </h1>
                             </div>
                         </div>
                     </div>

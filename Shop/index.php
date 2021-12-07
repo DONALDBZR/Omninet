@@ -39,22 +39,25 @@ ob_start();
         <script src="../public/Scripts/Front-End/Shop.js"></script>
     </head>
     <body id="app">
-        <header>
-            <div id="logo">
-                <a href="./">Omninet</a>
+    <header>
+        <div id="logo">
+            <a href="./">Omninet</a>
+        </div>
+        <nav>
+            <div>
+                <a href="./Cart" class="fas fa-shopping-cart faCart"></a>
             </div>
-            <nav>
-                <div>
-                    <a href="./Profile" class="fas fa-user faUser"></a>
-                </div>
-                <div>
-                    <a
-                        href="./Logout"
-                        class="fas fa-sign-out-alt faLogout"
-                    ></a>
-                </div>
-            </nav>
-        </header>
+            <div>
+                <a href="./Profile" class="fas fa-user faUser"></a>
+            </div>
+            <div>
+                <a
+                    href="./Logout"
+                    class="fas fa-sign-out-alt faLogout"
+                ></a>
+            </div>
+        </nav>
+    </header>
         <main>
             <div id="serverRendering">
                 <div id="data">
