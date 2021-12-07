@@ -79,10 +79,19 @@ class Item {
     }
     // Price handler method
     public function handlePrice() {
-        // Calculating the price of the item and storing it for further processing
-        $this->setPrice($this->getId() / 100);
-        // Adding the item
-        $this->add();
+        // Local variable
+        $value = $this->getId() / 100;
+        // If-statement to verify that the calculated value is more than 100
+        if ($value >= 100) {
+            // Calculating the price of the item and storing it for further processing
+            $this->setPrice($this->getId() / 100);
+            // Adding the item
+            $this->add();
+        } else {
+            $this->setPrice(1.00);
+            // Adding the item
+            $this->add();
+        }
     }
     // Add method
     public function add() {
